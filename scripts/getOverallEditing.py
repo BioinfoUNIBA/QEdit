@@ -8,28 +8,9 @@ try:
 except:
 	sys.exit('<REDItool table> <REDIportal file>')
 
-def BaseCount(seq,ref,mfr,VNUC):
-	b={'A':0,'C':0,'G':0,'T':0}
-	subs=[]
-	subv=[]
-	for i in seq.upper():
-		if b.has_key(i): b[i]+=1
-	for i in b:
-		if not b.has_key(ref): continue
-		if b[i]!=0 and i!=ref:
-			vv=float(b[i])/(b[i]+b[ref])
-			subv.append((b[i],vv,ref+i))
-	subv.sort()
-	subv.reverse()
-	for i in subv:
-		if i[0]>=VNUC and i[1]>=mfr: subs.append(i[2])
-	freq=0.0
-	if len(subs)==0: subs.append('-')
-	else: freq=subv[0][1]	
-	return sum(b.values()),[b['A'],b['C'],b['G'],b['T']],' '.join(subs),'%.2f'%(freq)
-
-tab=pysam.Tabixfile(edtablefile)
-
+try: tab=pysam.Tabixfile(edtablefile)
+except: sys.exit('REDItools table not indexed.')
+	
 nGall=0
 nAGall=0
 nPos=0
@@ -70,7 +51,7 @@ f.close()
 
 try: oved=float(nGall)/nAGall
 except: oved=0.0
-
-sys.stderr.write('%s %i %i %f\n' %(edtablefile,tPos,nPos,oved))
+sys.stderr.write('TableName #AllPositions #UsedPositions OverallEditing OverallEditingx100\n')
+sys.stderr.write('%s %i %i %.3f %.3f\n' %(edtablefile,tPos,nPos,oved,oved*100))
 
 
