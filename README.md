@@ -8,10 +8,11 @@
 </div> 
 <p>
 RNA editing is a co-/post-transcriptional phenomenon involving the insertion/deletion or substitution of specific bases in precise RNA localizations. Substitutional RNA editing, mostly by the adenosine to inosine (A-to-I) deamination, is prominent in mammals.
-RNA editing by base conversion has profound functional consequences and its deregulation has been linked to a variety of human diseases including neurological and neurodegenerative disorders or cancer.
-RNA editing can be profiled in deep transcriptome data but its detection is not trivial. Indeed the number of A-to-I candidates as well as the accuracy of predictions depends on the computational strategy adopted. And individual steps or specific software used can dramatically alter the quality of results.
+It has profound functional consequences and its deregulation has been linked to a variety of human diseases including neurological and neurodegenerative disorders or cancer.
+RNA editing can be profiled in deep transcriptome data but its detection is not trivial. Indeed the number of A-to-I candidates as well as the accuracy of predictions depends on the adopted computational strategy. Individual steps or specific software used can dramatically alter the quality of results.
 Quantifying RNA editing is relevant to compare independent samples and study its potential role in different experimental conditions.
-Here we provide simple scripts to calculate different metrics for RNA editing quantification. 
+Here we provide simple scripts to calculate different metrics for RNA editing quantification.
+Although a variety of programs to identify RNA editing candidates in RNAseq data has been released, we will profile inosinomes using <a href="https://github.com/BioinfoUNIBA/REDItools">REDItools</a> and <a href="http://srv00.recas.ba.infn.it/atlas/index.html">REDIportal</a>.
 </p>
 </body>
 </html>
