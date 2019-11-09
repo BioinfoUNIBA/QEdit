@@ -1,1 +1,32 @@
-Command lines
+#GTEx samples used in this study have been downloaded from dbGAP (through the dbGaP authorized access system), study: phs000424, consent group: GRU.  
+#Download the cerebellum sample with accession SRR607967 from GTEx project in fastq format. 
+#Pre-process fastq reads
+#Run FASTQC for quality check
+fastqc SRR607967_1.fastq SRR607967_2.fastq
+#Run FASTP for fastq trimming
+fastp -i SRR607967_1.fastq -I SRR607967_2.fastq -o SRR607967_1.trimmed.fastq -O SRR607967_2.trimmed.fastq --detect_adapter_for_pe
+-x -q 25 -n 1 -l 50 -y -w 8
+#Download Human Genome Primary Assembly version hg38
+wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh38.primary_assembly.genome.fa.gz
+gunzip ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh38.primary_assembly.genome.fa.gz
+#Download Human Genome Primary Assembly version hg19
+wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh37_mapping/GRCh37.primary_assembly.genome.fa.gz
+gunzip ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh37_mapping/GRCh37.primary_assembly.genome.fa.gz
+#Download Gene annotations for hg38
+wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_31/gencode.v31.primary_assembly.annotation.gtf.gz
+#Download Gene annotations for hg19
+wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_31/GRCh37_mapping/gencode.v31lift37.annotation.gtf.gz
+#Select main chromosomes only in fasta and gtf
+GRCh38.primary_assembly.genome.CHR.fa
+GRCh37.primary_assembly.genome.CHR.fa
+gencode.v31.annotation.CHR.gtf
+gencode.v31lift37.annotation.CHR.gtf
+#Index hg38 genome for bwa
+bwa index -p hg38 /lustrehome/epicardi/stardb/GRCh38.primary_assembly.genome.CHR.fa
+#Index hg19 genome for bwa
+bwa index -p hg19 /lustrehome/epicardi/stardb/GRCh37.primary_assembly.genome.CHR.fa
+#Index hg38 genome for STAR
+STAR --outFileNamePrefix hg38CHR --runMode genomeGenerate --runThreadN 10 --genomeDir hg38gencodev31_CHR_75 --genomeFastaFiles GRCh38.primary_assembly.genome.CHR.fa --sjdbGTFfile gencode.v31.annotation.CHR.gtf --sjdbOverhang 75
+#Index hg19 genome for STAR
+STAR --outFileNamePrefix hg19CHR --runMode genomeGenerate --runThreadN 10 --genomeDir hg19gencodev31_CHR_75 --genomeFastaFiles GRCh37.primary_assembly.genome.CHR.fa --sjdbGTFfile gencode.v31lift37.annotation.CHR.gtf --sjdbOverhang 75
+
