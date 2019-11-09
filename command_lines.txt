@@ -29,4 +29,30 @@ bwa index -p hg19 /lustrehome/epicardi/stardb/GRCh37.primary_assembly.genome.CHR
 STAR --outFileNamePrefix hg38CHR --runMode genomeGenerate --runThreadN 10 --genomeDir hg38gencodev31_CHR_75 --genomeFastaFiles GRCh38.primary_assembly.genome.CHR.fa --sjdbGTFfile gencode.v31.annotation.CHR.gtf --sjdbOverhang 75
 #Index hg19 genome for STAR
 STAR --outFileNamePrefix hg19CHR --runMode genomeGenerate --runThreadN 10 --genomeDir hg19gencodev31_CHR_75 --genomeFastaFiles GRCh37.primary_assembly.genome.CHR.fa --sjdbGTFfile gencode.v31lift37.annotation.CHR.gtf --sjdbOverhang 75
+#BWA mapping
+bwa mem -Y -t 10 hg19 SRR607967_1.fastq SRR607967_2.fastq > SRR607967_hg19_bwa.sam
+bwa mem -Y -t 10 hg19 SRR607967_1.trimmed.fastq SRR607967_2.trimmed.fastq > SRR607967_hg19_bwa_trimmed.sam
+bwa mem -Y -t 10 hg38 SRR607967_1.fastq SRR607967_2.fastq > SRR607967_hg38_bwa.sam
+bwa mem -Y -t 10 hg38 SRR607967_1.trimmed.fastq SRR607967_2.trimmed.fastq > SRR607967_hg38_bwa_trimmed.sam
+samtools view -b -@ 10 -o SRR607967_hg19_bwa.tmp.bam SRR607967_hg19_bwa.sam
+samtools view -b -@ 10 -o SRR607967_hg19_bwa_trimmed.tmp.bam SRR607967_hg19_bwa_trimmed.sam
+samtools view -b -@ 10 -o SRR607967_hg38_bwa.tmp.bam SRR607967_hg38_bwa.sam
+samtools view -b -@ 10 -o SRR607967_hg38_bwa_trimmed.tmp.bam SRR607967_hg38_bwa_trimmed.sam
+samtools sort -@ 10 -o SRR607967_hg19_bwa.bam SRR607967_hg19_bwa.tmp.bam
+samtools sort -@ 10 -o SRR607967_hg19_bwa_trimmed.bam SRR607967_hg19_bwa_trimmed.tmp.bam
+samtools sort -@ 10 -o SRR607967_hg38_bwa.bam SRR607967_hg38_bwa.tmp.bam
+samtools sort -@ 10 -o SRR607967_hg38_bwa_trimmed.bam SRR607967_hg38_bwa_trimmed.tmp.bam
+samtools index -@ 10 SRR607967_hg19_bwa.bam
+samtools index -@ 10 SRR607967_hg19_bwa_trimmed.bam
+samtools index -@ 10 SRR607967_hg38_bwa.bam
+samtools index -@ 10 SRR607967_hg38_bwa_trimmed.bam
+rm *.tmp.bam
+rm *.sam
+#STAR mapping
+STAR --twopassMode Basic --runThreadN 10 --genomeDir hg19gencodev31_CHR_75 --genomeLoad NoSharedMemory --outFileNamePrefix SRR607967_hg19_star_ --outReadsUnmapped Fastx --outSAMtype BAM SortedByCoordinate --outSAMstrandField intronMotif --outSAMattributes All --outFilterType BySJout --outFilterMultimapNmax 1 --alignSJoverhangMin 8 --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 --outFilterMismatchNoverLmax 0.04 --alignIntronMin 20 --alignIntronMax 1000000 --alignMatesGapMax 1000000 --readFilesIn SRR607967_1.fastq SRR607967_2.fastq
+STAR --twopassMode Basic --runThreadN 10 --genomeDir hg19gencodev31_CHR_75 --genomeLoad NoSharedMemory --outFileNamePrefix SRR607967_hg19_star_trimmed_ --outReadsUnmapped Fastx --outSAMtype BAM SortedByCoordinate --outSAMstrandField intronMotif --outSAMattributes All --outFilterType BySJout --outFilterMultimapNmax 1 --alignSJoverhangMin 8 --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 --outFilterMismatchNoverLmax 0.04 --alignIntronMin 20 --alignIntronMax 1000000 --alignMatesGapMax 1000000 --readFilesIn SRR607967_1.trimmed.fastq SRR607967_2.trimmed.fastq
+STAR --twopassMode Basic --runThreadN 10 --genomeDir hg38gencodev31_CHR_75 --genomeLoad NoSharedMemory --outFileNamePrefix SRR607967_hg38_star_ --outReadsUnmapped Fastx --outSAMtype BAM SortedByCoordinate --outSAMstrandField intronMotif --outSAMattributes All --outFilterType BySJout --outFilterMultimapNmax 1 --alignSJoverhangMin 8 --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 --outFilterMismatchNoverLmax 0.04 --alignIntronMin 20 --alignIntronMax 1000000 --alignMatesGapMax 1000000 --readFilesIn SRR607967_1.fastq SRR607967_2.fastq
+STAR --twopassMode Basic --runThreadN 10 --genomeDir hg38gencodev31_CHR_75 --genomeLoad NoSharedMemory --outFileNamePrefix SRR607967_hg38_star_trimmed_ --outReadsUnmapped Fastx --outSAMtype BAM SortedByCoordinate --outSAMstrandField intronMotif --outSAMattributes All --outFilterType BySJout --outFilterMultimapNmax 1 --alignSJoverhangMin 8 --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 --outFilterMismatchNoverLmax 0.04 --alignIntronMin 20 --alignIntronMax 1000000 --alignMatesGapMax 1000000 --readFilesIn SRR607967_1.trimmed.fastq SRR607967_2.trimmed.fastq
+
+
 
