@@ -69,8 +69,7 @@ java -jar JACUSA_v1.3.0.jar call-1 -a Y:5 -c 10 -q 30 -r SRR607967_hg19_bwa_jac.
 java -jar JACUSA_v1.3.0.jar call-1 -a Y:5 -c 10 -q 30 -r SRR607967_hg19_bwa_trimmed_jac.edi -R -p 8 SRR607967_hg19_bwa_trimmed.bam
 java -jar JACUSA_v1.3.0.jar call-1 -a Y:5 -c 10 -q 30 -r SRR607967_hg19_star_jac.edi -R -p 8 SRR607967_hg19_star_Aligned.sortedByCoord.out.bam
 java -jar JACUSA_v1.3.0.jar call-1 -a Y:5 -c 10 -q 30 -r SRR607967_hg19_star_trimmed_jac.edi -R -p 8 SRR607967_hg19_star_trimmed_Aligned.sortedByCoord.out.bam
-java -jar JACUSA_v1.3.0.jar call-1 -a Y:5 -c 10 -q 30 -r SRR607967_hg38_bwa_jac.edi -R -p 8 SRR60796
-7_hg38_bwa.bam
+java -jar JACUSA_v1.3.0.jar call-1 -a Y:5 -c 10 -q 30 -r SRR607967_hg38_bwa_jac.edi -R -p 8 SRR607967_hg38_bwa.bam
 java -jar JACUSA_v1.3.0.jar call-1 -a Y:5 -c 10 -q 30 -r SRR607967_hg38_bwa_trimmed_jac.edi -R -p 8 SRR607967_hg38_bwa_trimmed.bam
 java -jar JACUSA_v1.3.0.jar call-1 -a Y:5 -c 10 -q 30 -r SRR607967_hg38_star_jac.edi -R -p 8 SRR607967_hg38_star_Aligned.sortedByCoord.out.bam
 java -jar JACUSA_v1.3.0.jar call-1 -a Y:5 -c 10 -q 30 -r SRR607967_hg38_star_trimmed_jac.edi -R -p 8 SRR607967_hg38_star_trimmed_Aligned.sortedByCoord.out.bam
