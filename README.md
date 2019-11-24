@@ -14,5 +14,6 @@ Quantifying RNA editing is relevant to compare independent samples and study its
 Here we provide simple scripts to calculate different metrics for RNA editing quantification.
 Although a variety of programs to identify RNA editing candidates in RNAseq data has been released, we will profile inosinomes using <a href="https://github.com/BioinfoUNIBA/REDItools">REDItools</a> and <a href="http://srv00.recas.ba.infn.it/atlas/index.html">REDIportal</a>.
 </p>
+<img src="fig1_qedit.jpg">
 </body>
 </html>
