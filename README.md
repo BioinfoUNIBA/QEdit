@@ -16,7 +16,7 @@ Although a variety of programs to identify RNA editing candidates in RNAseq data
 </p>
 <p align="justify">The bioinformatics pipeline used to investigate RNA editing in RNAseq datasets is depicted in the following Figure. Below each step, we report main bioinformatics tools used, whose commad lines are included in this repository.
 </p>  
-<img align="middle" src="fig1_qedit.jpg" height="231" width="600">
+<div align="center"><img src="fig1_qedit.jpg" height="231" width="600"></div>
 <h3>RNA editing detection</h3>
 <h4>De novo approach</h4>
 <p align="justify">
