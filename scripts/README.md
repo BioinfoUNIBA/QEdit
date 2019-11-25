@@ -13,7 +13,7 @@ For control case studies by launching the get_DE_events.py script the user can f
 <ul>
 <li>RNAseq coverage per position (default <b>10 reads</b>)</li>
 <li>Minimum editing frequency per position (default <b>10%</b>)</li>
-For each editing candidate, the script applies the Mann–Whitney test to check the significance between the two groups, 
+For each editing candidate, the script applies the MannWhitney test to check the significance between the two groups, 
 A and B. By default the test is carried out only if the number of editing events per position is equal to 50% of the samples per group. This treshold can be manually modified for both groups by playing with the -mtsA and -mtsB options respectively.
 Optionally, p-values can be corrected using Benjamini–Hochberg or Bonferroni tests. 
 </ul>
