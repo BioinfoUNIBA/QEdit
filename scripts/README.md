@@ -31,8 +31,7 @@ usage: get_DE_events.py [-h] [-c MIN_COVERAGE] [-cpval PVALUE_CORRECTION]
 optional arguments:
   -h, --help            show this help message and exit
   -c MIN_COVERAGE       Coverage-q30
-  -cpval PVALUE_CORRECTION
-                        1 --> Bonferroni correction / 2 --> Benjamini hochberg
+  -cpval PVALUE_CORRECTION 1 --> Bonferroni correction / 2 --> Benjamini hochberg
   -input_file SAMPLES_INFORMATIONS_FILE
                         Comma separated file e.g: Sample,Group,Type
                         SRR1093527,GROUPA,BrainCerebellum...
