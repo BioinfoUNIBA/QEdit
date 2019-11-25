@@ -35,7 +35,7 @@ optional arguments:
   
   <b>-cpval</b> PVALUE_CORRECTION 1 --> Bonferroni correction / 2 --> Benjamini Hochberg
   
-  <b>-input_file</b> SAMPLES_INFORMATIONS_FILE Comma separated file e.g: Sample,Group,Type 
+  <b>-input_file</b> SAMPLES_INFORMATIONS_FILE (.sif) Comma separated file e.g: Sample,Group,Type 
   (e.g SRR1093527,GROUPA,BrainCerebellum..., SRR1088437,GROUPB,ArteryTibial... etc)
   
   <b>-gene_pos_file</b> GENE_POS_FILE nonsynonymous_table_NONREP derived from Rediportal 
@@ -72,14 +72,13 @@ in accordance with Benjamini Hochberg correction.</p>
 <h1>Accessory files</h1>
 <ul>
   <li>sample_status_file_creator.py</li>
-  <pre>This script generates a sample_information.csv file compatible with get_DE_events.py. It requires:
+  This script generates a sample_information.csv file compatible with get_DE_events.py. It requires:
   <ul>
     <li> A csv sample file containing the main informations about each sample to be used in the experiment. 
     An example of this file is included.</li>
     <li> Samples group1 (e.g. ArteryTibial) </li>
     <li> Samples group2 (e.g BrainCerebellum) </li>
     e.g  python sample_status_file_creator.py <csv_input_file, sample_group1, sample_group2>
-    </pre>
    </ul>
 </ul>
 
