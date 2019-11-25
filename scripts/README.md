@@ -72,8 +72,7 @@ in accordance with Benjamini Hochberg correction.</p>
 <h1>Accessory files</h1>
 <ul>
   <li>sample_status_file_creator.py</li>
-  <pre>This script generates a sample_information.csv file compatible with get_DE_events.py. 
-  It requires 3 arguments 
+  <pre>This script generates a sample_information.csv file compatible with get_DE_events.py. It requires:
   <ul>
     <li> A csv sample file containing the main informations about each sample to be used in the experiment. 
     An example of this file is included.</li>
@@ -82,7 +81,6 @@ in accordance with Benjamini Hochberg correction.</p>
     e.g  python sample_status_file_creator.py <csv_input_file, sample_group1, sample_group2>
     </pre>
    </ul>
-  
 </ul>
 
 
