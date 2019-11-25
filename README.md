@@ -36,15 +36,22 @@ The complete workflow for detecting de novo RNA editing events with REDItools is
 <h4>Overall editing level</h4>
 <p align="justify">The overall editing is defined as the total number of reads with G at all known editing positions over the number of all reads covering the positions without imposing specific sequencing coverage criteria. It can be calculated using REDItools tables obtained imposing loosing parameters.</p>
 
-> sudo apt-get install samtools
+> command lines
 
 <h4>ALU editing index</h4>
 <p align="justify">The Alu editing index (AEI) is a metric to quantify the global RNA editing activity of sample and is defined as the weighted average of editing events occurring in all Alu elements. The pipeline to calculate AEI is described in <a href="https://www.ncbi.nlm.nih.gov/pubmed/31636457">Roth et al. (2019)</a> and available <a href="https://github.com/a2iEditing/RNAEditingIndexer">here</a>.</p>
 
+> command lines
+
 <h4>Recoding index</h4>
 <p align="justify">The overall editing calculated at recoding positions residing in coding protein genes is named recoding index (REI). It has been initially described in <a href="https://www.ncbi.nlm.nih.gov/pubmed/30760294">Silvestris et al. (2019)</a>. This metric, used to investigate the activity of ADAR2, can be calculated using REDItools tables obtained imposing loosing parameters and a list of recoding sites from <a href="http://srv00.recas.ba.infn.it/atlas/index.html">REDIportal</a>.</p>
 
+> command lines
+
 <h3>Differential RNA editing</h3>
 <p align="justify">The identification of differential RNA editing is still an open question. Nonetheless, dysregulated RNA editing at recoding events can be calculated employing the Mann-Whitney U-test described in <a href="https://www.ncbi.nlm.nih.gov/pubmed/30760294">Silvestris et al. (2019)</a> or the statistical pipeline proposed by <a href="https://www.ncbi.nlm.nih.gov/pubmed/30559470">Tran et al. (2019)</a>.</p>
+
+> command lines
+
 </body>
 </html>
