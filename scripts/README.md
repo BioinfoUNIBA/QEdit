@@ -46,8 +46,8 @@ optional arguments:
                         cutoff level to reject H0 hypothesis default 0.05
   -linear               Enable linear statistical model
   -graph                R graph compatible table containing the following
-                        columns: Edited_Site | Delta_mean | log_padjstd |
-                        color NOTE: THIS OPTION CAN BE USED ONLY IN
+                        columns: Site|Delta|Mannwhitney|pval|Benjamini Hochberg corrected pvalue|status
+                        NOTE: THIS OPTION CAN BE USED ONLY IN
                         COMBINATION with -Gene_pos_file
   -chr_col CHR_COLUMN   If set to "yes" a chromosome_position column will be
                         aded to R graph table. NOTE: THIS OPTION IS SPECIFIC
