@@ -20,7 +20,9 @@ Although a variety of programs to identify RNA editing candidates in RNAseq data
 <h3>RNA editing detection</h3>
 <h4>De novo approach</h4>
 <p align="justify">
-
+RNA editing candidates can be detected using REDItools. There are two current versions: 1) <a href="https://github.com/BioinfoUNIBA/REDItools">REDItools</a> 1.3 or 2) <a href="https://github.com/BioinfoUNIBA/REDItools2">REDItools 2.0</a>.
+REDItools2 is a faster re-implementation of REDItools1 for HPC clusters. Its serial version is about ten times faster than REDItools1.
+The complete workflow for detecting de novo RNA editing events with REDItools is described <a href="https://github.com/BioinfoUNIBA/REDItools#Nature%20Protocol%20scripts">here</a>.
 </p>
 </body>
 </html>
