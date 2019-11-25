@@ -32,14 +32,8 @@ optional arguments:
   -h, --help            show this help message and exit
   -c MIN_COVERAGE       Coverage-q30
   -cpval PVALUE_CORRECTION 1 --> Bonferroni correction / 2 --> Benjamini hochberg
-  -input_file SAMPLES_INFORMATIONS_FILE
-                        Comma separated file e.g: Sample,Group,Type
-                        SRR1093527,GROUPA,BrainCerebellum...
-                        SRR1088437,GROUPB,ArteryTibial... etc
-  -gene_pos_file GENE_POS_FILE
-                        nonsynonymous_table_NONREP derived from Rediportal
-                        NOTE: THIS OPTION CAN BE USED ONLY IN COMBINATION with
-                        -graph
+  -input_file SAMPLES_INFORMATIONS_FILE Comma separated file e.g: Sample,Group,Type (e.g SRR1093527,GROUPA,BrainCerebellum..., SRR1088437,GROUPB,ArteryTibial... etc
+  -gene_pos_file GENE_POS_FILE nonsynonymous_table_NONREP derived from Rediportal NOTE: THIS OPTION CAN BE USED ONLY IN COMBINATION with -graph
   -f MIN_EDIT_FREQUENCY
                         Editing Frequency
   -mtsA GROUPA_MIN_SAMPLE_TESTING
