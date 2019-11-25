@@ -29,7 +29,7 @@ usage: get_DE_events.py [-h] [-c MIN_COVERAGE] [-cpval PVALUE_CORRECTION]
                         [-graph] [-chr_col CHR_COLUMN] [-rsite RSITE]
 
 optional arguments:
-  -h, --help            show this help message and exit
+  <b>-h</b>, --help            show this help message and exit
   -c MIN_COVERAGE       Coverage-q30
   -cpval PVALUE_CORRECTION 1 --> Bonferroni correction / 2 --> Benjamini hochberg
   -input_file SAMPLES_INFORMATIONS_FILE Comma separated file e.g: Sample,Group,Type (e.g SRR1093527,GROUPA,BrainCerebellum..., SRR1088437,GROUPB,ArteryTibial... etc
