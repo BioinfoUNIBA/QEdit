@@ -43,6 +43,6 @@ The complete workflow for detecting de novo RNA editing events with REDItools is
 <p align="justify">The overall editing calculated at recoding positions residing in coding protein genes is named recoding index (REI). It has been initially described in <a href="https://www.ncbi.nlm.nih.gov/pubmed/30760294">Silvestris et al. (2019)</a>. This metric, used to investigate the activity of ADAR2, can be calculated using REDItools tables obtained imposing loosing parameters and a list of recoding sites from <a href="http://srv00.recas.ba.infn.it/atlas/index.html">REDIportal</p>.
 
 <h3>Differential RNA editing</h3>
-
+<p align="justify">The identification of differential RNA editing is still an open question. Nonetheless, dysregulated RNA editing at recoding events can be calculated employing the Mann-Whitney U-test (<a href="https://www.ncbi.nlm.nih.gov/pubmed/30760294">Silvestris et al. 2019</a>) or the statistical pipeline proposed by <a href="https://www.ncbi.nlm.nih.gov/pubmed/30559470">Tran et al. (2019)</a>.</p>
 </body>
 </html>
