@@ -7,7 +7,7 @@
   <body>
 <h1>get_DE_events.py</h1>
 <h5>This scripts and its related files are part of the supplemental material for the paper<br>
-  "Investigating RNA editing in deep transcriptome datasets with REDItools and REDIportal"</h5>
+  "Quantifying RNA editing in deep transcriptome datasets"</h5>
 <p class-text="justify">
 For control case studies by launching the get_DE_events.py script the user can filter REDItoolDnaRna.py outputs according to the following criteria:
 <ul>
