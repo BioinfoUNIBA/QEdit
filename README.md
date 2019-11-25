@@ -24,5 +24,18 @@ RNA editing candidates can be detected using REDItools. There are two current ve
 REDItools2 is a faster re-implementation of REDItools1 for HPC clusters. Its serial version is about ten times faster than REDItools1.
 The complete workflow for detecting de novo RNA editing events with REDItools is described <a href="https://github.com/BioinfoUNIBA/REDItools#Nature%20Protocol%20scripts">here</a>.
 </p>
+<h4>“Known” approach</h4>
+<p align="justify">While the de novo approach provides a list of most likely editing candidates, the "known" approach focuses on a limited pool of known events in order to better investigate RNA editing dynamics in different experimental contexts. The "known" approach can be carried out using the REDItools package and a list of events.</p>
+
+<h4>Hyper editing</h4>
+
+<h3>Metrics for RNA editing quantification</h3>
+<palign="justify">The quantification of RNA editing is important to compare values across samples and study its potential role in different experimental conditions or in human disorders.</p>
+<h4>Overall editing level</h4>
+<h4>ALU editing index</h4>
+<h4>Recoding index</h4>
+
+<h3>Differential RNA editing</h3>
+
 </body>
 </html>
