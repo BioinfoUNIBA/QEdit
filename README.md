@@ -25,9 +25,10 @@ REDItools2 is a faster re-implementation of REDItools1 for HPC clusters. Its ser
 The complete workflow for detecting de novo RNA editing events with REDItools is described <a href="https://github.com/BioinfoUNIBA/REDItools#Nature%20Protocol%20scripts">here</a>.
 </p>
 <h4>“Known” approach</h4>
-<p align="justify">While the de novo approach provides a list of most likely editing candidates, the "known" approach focuses on a limited pool of known events in order to better investigate RNA editing dynamics in different experimental contexts. The "known" approach can be carried out using the REDItools package and a list of events.</p>
+<p align="justify">While the de novo approach provides a list of most likely editing candidates, the "known" approach focuses on a limited pool of known events in order to better investigate RNA editing dynamics in different experimental contexts. The "known" approach can be carried out using the REDItools package and a list of events from own data or from public databases such as <a href="https://darned.ucc.ie/">DARNED</a>, <a href="http://rnaedit.com/">RADAR</a> and <a href="http://srv00.recas.ba.infn.it/atlas/index.html">REDIportal</a>.</p>
 
 <h4>Hyper editing</h4>
+<p align="justify">Hyper editing can be detected through a specific computational protocol in which not aligned sequences are rescued and mapped again onto a transformed genome replacing As with Gs, described in detail <a href="https://www.ncbi.nlm.nih.gov/pubmed/25158696">here</a>. The computational pipeline is freely available <a href="https://github.com/hagitpt/Hyper-editing">here</a>.
 
 <h3>Metrics for RNA editing quantification</h3>
 <palign="justify">The quantification of RNA editing is important to compare values across samples and study its potential role in different experimental conditions or in human disorders.</p>
