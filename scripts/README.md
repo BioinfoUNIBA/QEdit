@@ -30,22 +30,18 @@ usage: get_DE_events.py [-h] [-c MIN_COVERAGE] [-cpval PVALUE_CORRECTION]
 
 optional arguments:
   <b>-h</b>, --help            show this help message and exit
-  -c MIN_COVERAGE       Coverage-q30
-  -cpval PVALUE_CORRECTION 1 --> Bonferroni correction / 2 --> Benjamini hochberg
-  -input_file SAMPLES_INFORMATIONS_FILE Comma separated file e.g: Sample,Group,Type (e.g SRR1093527,GROUPA,BrainCerebellum..., SRR1088437,GROUPB,ArteryTibial... etc
-  -gene_pos_file GENE_POS_FILE nonsynonymous_table_NONREP derived from Rediportal NOTE: THIS OPTION CAN BE USED ONLY IN COMBINATION with -graph
-  -f MIN_EDIT_FREQUENCY
-                        Editing Frequency
-  -mtsA GROUPA_MIN_SAMPLE_TESTING
-                        min percentage of groupA samples
-  -mtsB GROUPB_MIN_SAMPLE_TESTING
-                        min percentage of groupB samples
-  -sig ONLY_SIGNIFICANT
-                        Return only significant editing events
-  -siglevel STATISTICAL_SIGNIFICANCE
-                        cutoff level to reject H0 hypothesis default 0.05
-  -linear               Enable linear statistical model
-  -graph                R graph compatible table containing the following
+  <b>-c</b> MIN_COVERAGE       Coverage-q30
+  <b>-cpval</b> PVALUE_CORRECTION 1 --> Bonferroni correction / 2 --> Benjamini hochberg
+  <b>-input_file</b> SAMPLES_INFORMATIONS_FILE Comma separated file e.g: Sample,Group,Type (e.g     SRR1093527,GROUPA,BrainCerebellum..., SRR1088437,GROUPB,ArteryTibial... etc
+  <b>-gene_pos_file</b> GENE_POS_FILE nonsynonymous_table_NONREP derived from Rediportal NOTE: THIS OPTION CAN BE USED ONLY IN COMBINATION with -graph
+  <b>-f</b> MIN_EDIT_FREQUENCY Editing Frequency
+  <b>-mtsA</b> GROUPA_MIN_SAMPLE_TESTING min percentage of groupA samples                      
+  <b>-mtsB</b> GROUPB_MIN_SAMPLE_TESTING min percentage of groupB samples
+                        
+  <b>-sig ONLY_SIGNIFICANT</b> Return only statistically significant editing events
+  <b>-siglevel STATISTICAL_SIGNIFICANCE<7b> cutoff level to reject H0 hypothesis default 0.05
+  <b>-linear</b>               Enable linear statistical model
+  <b>-graph</b>                R graph compatible table containing the following
                         columns: Site|Delta|Mannwhitney|pval|Benjamini Hochberg corrected pvalue|status
                         NOTE: THIS OPTION CAN BE USED ONLY IN
                         COMBINATION with -Gene_pos_file
