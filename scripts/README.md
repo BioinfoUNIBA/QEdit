@@ -30,26 +30,38 @@ usage: get_DE_events.py [-h] [-c MIN_COVERAGE] [-cpval PVALUE_CORRECTION]
 
 optional arguments:
   <b>-h</b>, --help            show this help message and exit
+  
   <b>-c</b> MIN_COVERAGE       Coverage-q30
+  
   <b>-cpval</b> PVALUE_CORRECTION 1 --> Bonferroni correction / 2 --> Benjamini Hochberg
+  
   <b>-input_file</b> SAMPLES_INFORMATIONS_FILE Comma separated file e.g: Sample,Group,Type 
   (e.g SRR1093527,GROUPA,BrainCerebellum..., SRR1088437,GROUPB,ArteryTibial... etc)
+  
   <b>-gene_pos_file</b> GENE_POS_FILE nonsynonymous_table_NONREP derived from Rediportal 
   NOTE: THIS OPTION CAN BE USED ONLY IN COMBINATION with -graph
+  
   <b>-f</b> MIN_EDIT_FREQUENCY Editing Frequency
+  
   <b>-mtsA</b> GROUPA_MIN_SAMPLE_TESTING min percentage of groupA samples                      
+  
   <b>-mtsB</b> GROUPB_MIN_SAMPLE_TESTING min percentage of groupB samples                      
+  
   <b>-sig ONLY_SIGNIFICANT</b> Return only statistically significant editing events
+  
   <b>-siglevel STATISTICAL_SIGNIFICANCE</b> cutoff level to reject H0 hypothesis default 0.05
+  
   <b>-linear</b> Enable linear statistical model (Tran et al., 2019).
-  <b>-graph</b> R graph compatible table containing the following
-  columns: Site|Delta|Mannwhitney|pval|Benjamini Hochberg corrected pvalue|status
+  
+  <b>-graph</b> R graph compatible table containing the following columns: 
+  Site|Delta|Mannwhitney|pval|Benjamini Hochberg corrected pvalue|status
   NOTE: THIS OPTION CAN BE USED ONLY IN COMBINATION with -Gene_pos_file
-  <b>-chr_col CHR_COLUMN</b>   If set to "yes" a chromosome_position column will be
-  added to R graph table. NOTE: THIS OPTION IS SPECIFIC FOR -graph & -Gene_pos_file COMBINATION
-  -rsite RSITE          If set to "yes" all recoding sites will be shown in
-                        the output table. NOTE: THIS OPTION ONLY WORKS IN
-                        LINEAR AND DEFAULT MODE.
+  
+  <b>-chr_col CHR_COLUMN</b> If set to "yes" a chromosome_position column will be added to R graph table. 
+  NOTE: THIS OPTION IS SPECIFIC FOR -graph & -Gene_pos_file COMBINATION
+  
+ <b> -rsite RSITE If set to "yes"</b> all recoding sites will be shown in the output table. 
+ NOTE: THIS OPTION ONLY WORKS IN LINEAR AND DEFAULT MODE.
                                                                                       
 <b>e.g.</b> python ../REDItools/accessory/get_DE_events.py -cpval 2 -input_file  sample_information.csv -sig yes
 <p class-text="justify">The script will filter REDItoolDnaRna.py outputs for each sample contained in the 
