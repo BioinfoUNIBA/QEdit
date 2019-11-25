@@ -37,12 +37,19 @@ The complete workflow for detecting de novo RNA editing events with REDItools is
 <p align="justify">The overall editing is defined as the total number of reads with G at all known editing positions over the number of all reads covering the positions without imposing specific sequencing coverage criteria. It can be calculated using REDItools tables obtained imposing loosing parameters.</p>
 
 Download REDIportal annotations
+>
 > wget http://srv00.recas.ba.infn.it/webshare/rediportalDownload/table1_full.txt.gz
+>
 > gunzip table1_full.txt.gz
+>
 Index your REDItools output table by tabix
+>
 > bgzip outTable.txt
+>
 > tabix -s 1 -b 2 -e 2 -c R outTable.txt.gz
+>
 Run the overall script on a REDItools table
+>
 > python getOverallEditing.py outTable.txt.gz table1_full.txt
 
 <h4>ALU editing index</h4>
