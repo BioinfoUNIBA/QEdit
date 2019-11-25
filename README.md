@@ -31,9 +31,13 @@ The complete workflow for detecting de novo RNA editing events with REDItools is
 <p align="justify">Hyper editing can be detected through a specific computational protocol in which not aligned sequences are rescued and mapped again onto a transformed genome replacing As with Gs, described in detail <a href="https://www.ncbi.nlm.nih.gov/pubmed/25158696">here</a>. The computational pipeline is freely available <a href="https://github.com/hagitpt/Hyper-editing">here</a>.
 
 <h3>Metrics for RNA editing quantification</h3>
-<palign="justify">The quantification of RNA editing is important to compare values across samples and study its potential role in different experimental conditions or in human disorders.</p>
+<p align="justify">The quantification of RNA editing is important to compare values across samples and study its potential role in different experimental conditions or in human disorders.</p>
 <h4>Overall editing level</h4>
+<p align="justify">The overall editing is defined as the total number of reads with G at all known editing positions over the number of all reads covering the positions without imposing specific sequencing coverage criteria. It can be calculated using REDItools tables obtained imposing loosing parameters.</p>
+
 <h4>ALU editing index</h4>
+<p align="justify">The Alu editing index (AEI) is a metric to quantify the global RNA editing activity of sample and is defined as the weighted average of editing events occurring in all Alu elements. The pipeline to calculate AEI is described in <a href="https://www.ncbi.nlm.nih.gov/pubmed/31636457">Roth et al.</a> and available <a href="https://github.com/a2iEditing/RNAEditingIndexer">here</a>.</p>
+
 <h4>Recoding index</h4>
 
 <h3>Differential RNA editing</h3>
