@@ -36,6 +36,8 @@ The complete workflow for detecting de novo RNA editing events with REDItools is
 <h4>Overall editing level</h4>
 <p align="justify">The overall editing is defined as the total number of reads with G at all known editing positions over the number of all reads covering the positions without imposing specific sequencing coverage criteria. It can be calculated using REDItools tables obtained imposing loosing parameters.</p>
 
+> sudo apt-get install samtools
+
 <h4>ALU editing index</h4>
 <p align="justify">The Alu editing index (AEI) is a metric to quantify the global RNA editing activity of sample and is defined as the weighted average of editing events occurring in all Alu elements. The pipeline to calculate AEI is described in <a href="https://www.ncbi.nlm.nih.gov/pubmed/31636457">Roth et al. (2019)</a> and available <a href="https://github.com/a2iEditing/RNAEditingIndexer">here</a>.</p>
 
