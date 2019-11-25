@@ -3,10 +3,10 @@ import sys, os
 import pysam
 
 try:
-	edtablefile=sys.argv[1] #"/lustrehome/epicardi/home/sra/SRR607337/SRR607337_dna.txt.gz"
-	redifile=sys.argv[2] #"/lustrehome/epicardi/home/FINALediting/TABLE1_complete_corrected2.txt" #sys.argv[2]
+	edtablefile=sys.argv[1]
+	redifile=sys.argv[2]
 except:
-	sys.exit('<REDItool table> <REDIportal file>')
+	sys.exit('<REDItool table indexed by Tabix> <REDIportal file>')
 
 try: tab=pysam.Tabixfile(edtablefile)
 except: sys.exit('REDItools table not indexed.')
