@@ -55,7 +55,9 @@ Run the overall script on a REDItools table
 <h4>ALU editing index</h4>
 <p align="justify">The Alu editing index (AEI) is a metric to quantify the global RNA editing activity of sample and is defined as the weighted average of editing events occurring in all Alu elements. The pipeline to calculate AEI is described in <a href="https://www.ncbi.nlm.nih.gov/pubmed/31636457">Roth et al. (2019)</a> and available <a href="https://github.com/a2iEditing/RNAEditingIndexer">here</a>.</p>
 
-> command lines
+Install the RNAEditingIndex program following the instructions provided <a href="https://github.com/a2iEditing/RNAEditingIndexer">here</a> and create a directory containing all BAM files.
+>
+> RNAEditingIndex -d ALLBAMS -o ALLBAMS/indexer -os ALLBAMS --genome hg38 --paired_end -f .bam
 
 <h4>Recoding index</h4>
 <p align="justify">The overall editing calculated at recoding positions residing in coding protein genes is named recoding index (REI). It has been initially described in <a href="https://www.ncbi.nlm.nih.gov/pubmed/30760294">Silvestris et al. (2019)</a>. This metric, used to investigate the activity of ADAR2, can be calculated using REDItools tables obtained imposing loosing parameters and a list of recoding sites from <a href="http://srv00.recas.ba.infn.it/atlas/index.html">REDIportal</a>.</p>
