@@ -91,7 +91,7 @@ Run sample_status_file_creator.py providing:
 
 > sample_status_file_creator.py csv_input_file, sample_group1, sample_group2 
 
-<p align="justify">Run the get_DE_events.py script (Mann-Whitney U-test) on multiple REDItools tables following the sample/Group subdivions reported in the sample informations file (.sif). Cpval 1/2 switches between Bonferroni/Benjamini Hochberg corrections and, in combination with -sig yes, allows the user to recover only significantly edited positions.</p>
+<p align="justify">Run the get_DE_events.py script (Mann-Whitney U-test) on multiple REDItools tables following the sample/Group subdivions reported in the sample informations file (.sif). The option -sig yes in combination with -cpval 2 (BH correction), allows the user to recover only significantly edited positions.</p>
 
 > python get_DE_events.py -input_file ArteryTibial_vs_BrainCerebellum.sif  -cpval 2  -mtsA 25.0 -mtsB 21.0 -sig yes
 
