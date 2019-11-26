@@ -99,7 +99,7 @@ Alternatively, run the get_DE_events.py script on the same samples applying the 
 
 > python get_DE_events.py -input_file ../ArteryTibial_vs_BrainCerebellum.sif  -linear
 
-Additional informations, about the get_DE_events.py script can be found <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/scripts/README.md"> here</a>.
+A detailed explanation, about the get_DE_events.py script options can be found <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/scripts/README.md"> here</a>.
 
 </body>
 </html>
