@@ -96,7 +96,7 @@ Run sample_status_file_creator.py providing:
 </ul>
 </p> 
 
-> sample_status_file_creator.py csv_input_file, sample_group1, sample_group2 
+> sample_status_file_creator.py csv_input_file, sample_group1_name, sample_group2_name 
 
 <p align="justify">Run the get_DE_events.py script (Mann-Whitney U-test) on multiple REDItools tables following the sample/Group subdivions reported in the sample informations file (.sif). The option -sig yes in combination with -cpval 2 (BH correction), returns only significantly edited positions. MtsA and mtsB, represents the minimum threshold of samples per group on which the statistical tests are applied.</p>
 
