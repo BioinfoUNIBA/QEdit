@@ -86,7 +86,12 @@ Run the REI script on a REDItools table
 <p align="justify">The identification of differential RNA editing is still an open question. Nonetheless, dysregulated RNA editing at recoding events can be calculated employing the Mann-Whitney U-test described in <a href="https://www.ncbi.nlm.nih.gov/pubmed/30760294">Silvestris et al. (2019)</a> or the statistical pipeline proposed by <a href="https://www.ncbi.nlm.nih.gov/pubmed/30559470">Tran et al. (2019)</a> 
 Both pipelines are embedded with the get_DE_events.py script.</p>
 
-Run the get_DE_events.py script (with Mann-Whitney U-test) on multiple REDItools tables according to the sample/Group subdivions reported in the sample informations file (.sif).
+Prepare a comma separated sample informations file required as input by the get_DE_events.py script.
+Run sample_status_file_creator.py providing 
+
+> sample_status_file_creator.py csv_input_file, sample_group1, sample_group2 
+
+Run the get_DE_events.py script (Mann-Whitney U-test) on multiple REDItools tables following the sample/Group subdivions reported in the sample informations file (.sif). Cpval 1/2 switches between Bonferroni/Benjamini Hochberg corrections and, in combination with -sig yes, allows the user to recover only significantly edited positions.
 
 > python get_DE_events.py -input_file ArteryTibial_vs_BrainCerebellum.sif  -cpval 2  -mtsA 25.0 -mtsB 21.0 -sig yes
 
