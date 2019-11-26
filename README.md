@@ -85,6 +85,7 @@ Run the REI script on a REDItools table
 <h3>Differential RNA editing</h3>
 <p align="justify">The identification of differential RNA editing is still an open question. Nonetheless, dysregulated RNA editing at recoding events can be calculated employing the Mann-Whitney U-test described in <a href="https://www.ncbi.nlm.nih.gov/pubmed/30760294">Silvestris et al. (2019)</a> or the statistical pipeline proposed by <a href="https://www.ncbi.nlm.nih.gov/pubmed/30559470">Tran et al. (2019)</a>.</p>
 
+Both pipelines are embedded with the get_DE_events.py script.
 > command lines
 
 </body>
