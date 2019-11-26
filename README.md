@@ -89,9 +89,10 @@ Both pipelines are embedded with the get_DE_events.py script.</p>
 <p align="justify"> Prepare a comma separated sample informations file required as input by the get_DE_events.py script.
 Run sample_status_file_creator.py providing:
 <ul>
-  <li>A csv sample file containing the main informations about each sample to be used in the experiment. An example of this file is included <a href="">here</a>.</li>
-  <li></li>
-  <li></li>
+  <li>A csv sample file containing the main informations about each sample to be used in the experiment. 
+    An example of this file is included <a href="">here</a>.</li>
+  <li>A name for Samples group1 (e.g. ArteryTibial) </li>
+  <li>A name for Samples group2 (e.g BrainCerebellum) </li>
 </ul>
 </p> 
 
