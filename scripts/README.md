@@ -9,7 +9,7 @@
 <h5>This scripts and its related files are part of the supplemental material for the paper<br>
   "Quantifying RNA editing in deep transcriptome datasets"</h5>
 <p class-text="justify">
-For control case studies by launching the get_DE_events.py script the user can filter REDItoolDnaRna.py outputs according to the following criteria:
+This script compares REDItools output table arising from multiple samples and returns dysregulated RNA editing at recoding events by means of the Mann-Whitney U-test described in Silvestris et al. (2019) or the statistical pipeline proposed by Tran et al. (2019). REDItoools output table are pre-filtered according to these main following criteria.  
 <ul>
 <li>RNAseq coverage per position (default <b>10 reads</b>)</li>
 <li>Minimum editing frequency per position (default <b>10%</b>)</li>
