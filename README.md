@@ -102,11 +102,11 @@ Run sample_status_file_creator.py providing:
 
 > mkdir ArteryTibial_vs_BrainCerebellum && cd ArteryTibial_vs_BrainCerebellum
 
-<p align="justify"> Download and run sample_path_folder_creator.py that will copy the Reditools tables in different directories following the sample/Group subdivisions reported in the sample informations file (.sif). </p>
-
-> wget -O sample_path_folder_creator.py "https://raw.githubusercontent.com/BioinfoUNIBA/QEdit/master/scripts/sample_path_folder_creator.py"
+<p align="justify"> Run sample_path_folder_creator.py that will copy the Reditools tables in different directories following the sample/Group subdivisions reported in the sample informations file (.sif). </p>
 
 > python sample_path_folder_creator.py csv_sample_file.sif
+
+Note. The script assumes that REDItools outputs (e.g. SRR1071289, SRR1101591) are contained in a "tables" folder in your main working directory, otherwise modify the last line of the script accordingly.
 
 <p align="justify">Run the get_DE_events.py script (Mann-Whitney U-test) on multiple REDItools tables following the sample/Group subdivions reported in the sample informations file (.sif). The option -sig yes in combination with -cpval 2 (BH correction), returns only significantly edited positions. MtsA and mtsB, represents the minimum threshold of samples per group on which the statistical tests are applied.</p>
 
