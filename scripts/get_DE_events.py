@@ -1,14 +1,37 @@
-#################################### REDI OUT TABLE ########################################
+# coding=utf-8
+# Copyright (c) 2019-2020 Claudio Lo Giudice <clalogiudice@gmail.com>
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+#################################### REDI OUT TABLE ########################################################
 #Region		Position	Reference	Strand	Coverage-q30	MeanQ	BaseCount[A,C,G,T]	   #
 #AllSubs	Frequency	gCoverage-q30	gMeanQ	gBaseCount[A,C,G,T]	gAllSubs	gFrequency #
-############################################################################################
+############################################################################################################
 
-###################################GET_DE_events_table#########################################
+###################################GET_DE_events_table#####################################################
 #chromosome	position	editing_type	SRR3306830_CTRL		SRR3306831_CTRL	  SRR3306832_CTRL #
-#SRR3306833_CTRL	SRR3306834_CTRL	SRR3306835_CTRL   SRR3306836_CTRL	SRR3306823_DIS        #	
-#SRR3306824_DIS	    SRR3306825_DIS	SRR3306826_DIS	SRR3306827_DIS	SRR3306828_DIS	etc.      #
-#[num_controls/num_disease]	delta_diff	pvalue (Mannwhitney)       							  #
-###############################################################################################
+#SRR3306833_CTRL	SRR3306834_CTRL	SRR3306835_CTRL   SRR3306836_CTRL	SRR3306823_DIS            #	
+#SRR3306824_DIS	    SRR3306825_DIS	SRR3306826_DIS	SRR3306827_DIS	SRR3306828_DIS	etc.              #
+#[num_controls/num_disease]	delta_diff	pvalue (Mannwhitney)       				  #			  #
+###########################################################################################################
+
+
 
 import os, sys, argparse
 from scipy import stats
@@ -28,7 +51,8 @@ parser.add_argument("-input_file", action = 'store', dest = 'samples_information
 		SRR1093527,GROUPA,BrainCerebellum... SRR1088437,GROUPB,ArteryTibial... etc')
 parser.add_argument("-gene_pos_file", action = 'store', dest = 'gene_pos_file',
 		type = str, default= 'empty', help = 'nonsynonymous_table_NONREP derived from Rediportal\
-					NOTE: THIS OPTION CAN BE USED ONLY IN COMBINATION with -graph' )
+					NOTE: A gene_pos_file is required by -graph or -rsite options. \
+An example file can be found at "https://github.com/BioinfoUNIBA/QEdit/blob/master/Example_files/nonsynonymous_table_NONREP_2BS.txt"')
 parser.add_argument("-f", action = 'store', dest = 'min_edit_frequency',
 		type = float, default=0.1, help='Editing Frequency')
 #parser.add_argument("-mts", action = 'store', dest = 'min_sample_testing',
@@ -50,16 +74,13 @@ parser.add_argument("-chr_col", action = 'store', dest = 'chr_column',
 		type = str, default = 'no', help = 'If set to "yes" a chromosome_position column will be\
 					aded to R graph table. \
 					NOTE: THIS OPTION IS SPECIFIC FOR -graph & -Gene_pos_file COMBINATION' )
-parser.add_argument("-rsite", action = 'store', dest = 'rsite',
-		type = str, default = 'no', help = 'If set to "yes" all recoding sites will be shown in\
+parser.add_argument("-rsite", action = 'store_true', help = 'If set to "yes" all recoding sites will be shown in\
 					the output table. \
-					NOTE: THIS OPTION ONLY WORKS IN LINEAR AND DEFAULT MODE.')
+					NOTE: THIS OPTION ONLY WORKS IN DEFAULT MODE.')
 
 args = parser.parse_args()
-#print args
 min_coverage = args.min_coverage
 min_edit_frequency = args.min_edit_frequency
-#min_sample_testing = args.min_sample_testing
 min_sample_testing_A = args.groupA_min_sample_testing
 min_sample_testing_B = args.groupB_min_sample_testing
 only_significants = args.only_significant
@@ -332,10 +353,6 @@ def call_sites(gene_pos_file):
 
 def only_sig(row):
 	"""Returns only significant events"""
-	#if(row[-1] != '-') and (float(row[-2]) <= float(row[-1])):
-	#	row =  row[0].split('_') + row[1:]
-	#	row = '\t'.join(map(str,row))
-	#	return row
 	if row[-1] == 'yes':
 		return row
 
@@ -394,9 +411,6 @@ for directory in cwd:
 
 
 table_columns = map(lambda x: x + '_' + '_'.join(sample_informations[x]), sorted(sample_informations.keys()))
-
-#disease = [i for i in table_columns if i.upper().find('DIS') != -1]
-#controls = [i for i in table_columns if i.upper().find('CTRL') != -1]
 
 disease = [i.replace('_GROUPB','') for i in table_columns if i.upper().find('GROUPB') != -1]
 controls = [i.replace('_GROUPA','') for i in table_columns if i.upper().find('GROUPA') != -1]
@@ -509,20 +523,32 @@ else:
 		else:
 			out = total_rows #without correction
 
-		if rsite == 'yes':
+		if rsite:
 			dic_aa_changes = call_sites(gene_pos_file)
 			header.insert(2,'Recoding_site')
 
-		print '\t'.join(header)
-		for l in sorted(out, key = lambda x: Set_Chr_Nr(x[0])):
-			chr_pos = (l[0].split('_')[0], int(l[0].split('_')[1])) 
-			site = dic_aa_changes.get(chr_pos, '-')
-			l = l[0].split('_') + l[1:] 
-			l.insert(2, '_'.join(site))
-			if any(filter(None,map(type_ed,l))):
-				ed = filter(None,map(type_ed,l))[0]
-				l.insert(2,ed)
-			else:
-				l.insert(2,'-')
-			l = map(tuple_replace_bis, l)
-			print '\t'.join(map(str,l))
+			print '\t'.join(header)
+			for l in sorted(out, key = lambda x: Set_Chr_Nr(x[0])):
+				chr_pos = (l[0].split('_')[0], int(l[0].split('_')[1])) 
+				site = dic_aa_changes.get(chr_pos, '-')
+				l = l[0].split('_') + l[1:] 
+				l.insert(2, '_'.join(site))
+				if any(filter(None,map(type_ed,l))):
+					ed = filter(None,map(type_ed,l))[0]
+					l.insert(2,ed)
+				else:
+					l.insert(2,'-')
+				l = map(tuple_replace_bis, l)
+				print '\t'.join(map(str,l))
+		else:
+			print '\t'.join(header)
+			for l in sorted(out, key = lambda x: Set_Chr_Nr(x[0])):
+				chr_pos = (l[0].split('_')[0], int(l[0].split('_')[1])) 
+				l = l[0].split('_') + l[1:] 
+				if any(filter(None,map(type_ed,l))):
+					ed = filter(None,map(type_ed,l))[0]
+					l.insert(2,ed)
+				else:
+					l.insert(2,'-')
+				l = map(tuple_replace_bis, l)
+				print '\t'.join(map(str,l))
