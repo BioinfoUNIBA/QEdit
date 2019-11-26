@@ -97,7 +97,7 @@ Run sample_status_file_creator.py providing:
 
 Alternatively, run the get_DE_events.py script on the same samples applying the the statistical pipeline proposed by <a href="https://www.ncbi.nlm.nih.gov/pubmed/30559470">Tran et al. (2019)</a> 
 
-> python get_DE_events.py -input_file ../ArteryTibial_vs_BrainCerebellum.sif  -linear
+> python get_DE_events.py -linear -input_file ../ArteryTibial_vs_BrainCerebellum.sif  
 
 A detailed explanation, about the get_DE_events.py script options can be found <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/scripts/README.md"> here</a>.
 
