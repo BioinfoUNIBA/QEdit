@@ -13,7 +13,7 @@ This script compares REDItools output table arising from multiple samples and re
 <ul>
 <li>RNAseq coverage per position (default <b>10 reads</b>)</li>
 <li>Minimum editing frequency per position (default <b>10%</b>)</li>
-<p class-text="justify">For each editing candidate, the script applies the MannWhitney test to check the significance between the two groups, A and B. <br> By default the test is carried out only if the number of editing events per position is equal to 50% of the samples per group. This treshold can be manually modified (for both groups) by playing with the -mtsA and -mtsB options respectively. <br> Returned p-values can be corrected using Benjamini–Hochberg or Bonferroni tests.</p> 
+<p class-text="justify">For each editing candidate, the script applies the MannWhitney test to check the significance between the two groups, A and B. <br> By default the test is carried out only if the number of editing events per position is equal to 50% of the samples per group. <br> This treshold can be manually modified (for both groups) by playing with the -mtsA and -mtsB options respectively. <br> Returned p-values can be corrected using Benjamini Hochberg or Bonferroni tests.</p> 
 </ul>
 <p>Usage:</p> 
 <pre>
