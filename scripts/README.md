@@ -62,7 +62,7 @@ optional arguments:
   NOTE: THIS OPTION IS SPECIFIC FOR -graph & -Gene_pos_file COMBINATION
   
  <b> -rsite RSITE If set to "yes"</b> all recoding sites will be shown in the output table. 
- NOTE: THIS OPTION ONLY WORKS IN LINEAR AND DEFAULT MODE.
+ NOTE: THIS OPTION ONLY WORKS IN DEFAULT MODE.
                                                                                       
 <b>e.g.</b> python ../REDItools/accessory/get_DE_events.py -cpval 2 -input_file  sample_information.csv -sig yes
 <p class-text="justify">The script will filter REDItoolDnaRna.py outputs for each sample contained in the
