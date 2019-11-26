@@ -39,7 +39,8 @@ optional arguments:
   (e.g SRR1093527,GROUPA,BrainCerebellum..., SRR1088437,GROUPB,ArteryTibial... etc)
   
   <b>-gene_pos_file</b> GENE_POS_FILE nonsynonymous_table_NONREP derived from Rediportal 
-  NOTE: THIS OPTION CAN BE USED ONLY IN COMBINATION with -graph
+  NOTE: A gene_pos file is required by -graph or -rsite.
+  An example file can be found here <a href="https://raw.githubusercontent.com/BioinfoUNIBA/QEdit/master/Example_files/nonsynonymous_table_NONREP_2BS.txt">here</a>.
   
   <b>-f</b> MIN_EDIT_FREQUENCY Editing Frequency
   
