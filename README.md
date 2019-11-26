@@ -86,7 +86,7 @@ Run the REI script on a REDItools table
 <p align="justify">The identification of differential RNA editing is still an open question. Nonetheless, dysregulated RNA editing at recoding events can be calculated employing the Mann-Whitney U-test described in <a href="https://www.ncbi.nlm.nih.gov/pubmed/30760294">Silvestris et al. (2019)</a> or the statistical pipeline proposed by <a href="https://www.ncbi.nlm.nih.gov/pubmed/30559470">Tran et al. (2019)</a> 
 Both pipelines are embedded with the get_DE_events.py script.</p>
 
-<p align="justify"> Prepare a comma separated sample informations file required as input by the get_DE_events.py script.
+<p align="justify"> Prepare a comma separated sample informations file (e.g ArteryTibial_vs_BrainCerebellum.sif) required as input by the get_DE_events.py script.<br>
 Run sample_status_file_creator.py providing:
 <ul>
   <li>A csv sample file containing the main informations about each sample to be used in the experiment.<br>
@@ -97,6 +97,15 @@ Run sample_status_file_creator.py providing:
 </p> 
 
 > sample_status_file_creator.py csv_input_file, sample_group1_name, sample_group2_name 
+
+<p align="justify">Create a confortable workdir (e.g. ArteryTibial_vs_BrainCerebellum) and enter it</p>
+
+> mkdir ArteryTibial_vs_BrainCerebellum && cd ArteryTibial_vs_BrainCerebellum
+
+<p align="justify">Run sample_path_folder_creator.py that will copy the Reditools tables in different directories following the sample/Group subdivions reported in the sample informations file (.sif). </p>
+
+> python sample_path_folder_creator.py 
+
 
 <p align="justify">Run the get_DE_events.py script (Mann-Whitney U-test) on multiple REDItools tables following the sample/Group subdivions reported in the sample informations file (.sif). The option -sig yes in combination with -cpval 2 (BH correction), returns only significantly edited positions. MtsA and mtsB, represents the minimum threshold of samples per group on which the statistical tests are applied.</p>
 
