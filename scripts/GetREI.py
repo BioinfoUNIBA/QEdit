@@ -13,20 +13,18 @@ USAGE: python GetREI.py [options]
 Options:
 -i		Table file [mandatory]
 -r		RECODING positions [mandatory]
--p		Min coverage of recoding sites [0]
 -o		Output file base name (outfile_%s)
 -h		Print this help
 
 """%(pid)
 
 try:
-	opts, args = getopt.getopt(sys.argv[1:], "i:o:r:p:h")
+	opts, args = getopt.getopt(sys.argv[1:], "i:o:r:h")
 except getopt.GetoptError as err:
 	print str(err) # will print something like "option -a not recognized"
 	usage()
 	sys.exit(2)
 
-cRec=0 #Min coverage of recoding sites
 tabfile=''
 fastafile=''
 recodingfile=''
@@ -39,13 +37,10 @@ for o, a in opts:
 	elif o == "-i": tabfile=a
 	elif o == "-o": basename=a
 	elif o == "-r": recodingfile=a
-	elif o == "-p": cRec=int(a)
 	else:
 		assert False, "Unhandled Option"
 
 ds={'0':'-','1':'+','2':'+','+':'1','-':'0'}
-
-
 
 
 def eRes(res,lf):
@@ -54,7 +49,7 @@ def eRes(res,lf):
 		for j in i:
 			if j!='ND':x+=1
 	if x==lf: return 1
-	return 0 
+	return 0
 
 ################################################
 
@@ -76,8 +71,11 @@ o=open(outfile2,'w')
 head='\t'.join(['Chr','Start/End','Cov','MisMatch','EdFreq','Gene','AAchange','AAchangePos'])
 o.write('#'+head+'\n')
 f=open(recodingfile)
+allrec=0
+used=0
 for i in f:
 	l=(i.strip()).split('\t')
+	allrec+=1
 	chr=l[0]
 	cc=(int(l[1])-1,int(l[1]))
 	gene=l[10]
@@ -89,39 +87,30 @@ for i in f:
 		res = [l[0],l[1],'-','-','%.5f' %(0.0),gene,aa,la]
 		o.write('\t'.join(res)+'\n')
 		continue
-	if pos[0][7]=='-':
-		res = [l[0],l[1],pos[0][4],pos[0][7],'%.5f' %(0.0),gene,aa,la]
-		o.write('\t'.join(res)+'\n')
-		continue
-	elif int(pos[0][4]) < cRec:
-		res = [l[0],l[1],pos[0][4],pos[0][7],pos[0][8],gene,aa,la]
-		o.write('\t'.join(res)+'\n')
-		continue
+	if l[2] not in ['A','T']: continue
 	mm=pos[0][7].split()[0]
-	if mm not in ['AG','TC']: continue
 	c=eval(pos[0][6])
-	if mm=='AG':
+	if l[2]=='A':
 		AG[0]+=c[0]
 		AG[1]+=c[2]
 		try: ed=float(c[2])/(c[2]+c[0])
 		except: ed=0.0
-	elif mm=='TC':
+	elif l[2]=='T':
 		AG[0]+=c[3]
 		AG[1]+=c[1]
 		try: ed=float(c[1])/(c[1]+c[3])
 		except: ed=0.0
-	res = [l[0],l[1],pos[0][4],'AG','%.5f' %(ed),gene,aa,la]
-	o.write(' '.join(res)+'\n')
+	res = [l[0],l[1],pos[0][4],mm,'%.5f' %(ed),gene,aa,la]
+	o.write('\t'.join(res)+'\n')
+	used+=1
 f.close()
 
 try: REI=float(AG[1])/(sum(AG))
 except: REI=0.0
-o.write('>REI %.10f %.10f\n' %(REI,REI*100,))
+o.write('All recoding: %i Covered: %i\n' %(allrec,used))
+o.write('>REI %.10f %.10f\n' %(REI,REI*100))
 table.close()
 o.close()
 sys.stderr.write('ALL done.\n')
-
-
-
 
 
