@@ -395,7 +395,7 @@ for directory in cwd:
 			for line in a:
 				if line.startswith('chr'):
 					s = map(str.strip, line.split("\t"))
-					if s[7] == 'AG' or s[7] == 'TC':
+					if s[7].split(' ')[0] in ['AG','TC']:
 						site, freq, coverage, ed_type = s[0] + "_" + s[1], s[8], s[4], s[7]
 						if site not in all_available_sites: 
 							all_available_sites.append(site)
