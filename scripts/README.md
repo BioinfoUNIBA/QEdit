@@ -81,7 +81,7 @@ in accordance with Benjamini Hochberg correction.</p>
     <li> Samples group2 (e.g BrainCerebellum) </li>
   </ul>
 
-    >python sample_status_file_creator.py csv_input_file, sample_group1, sample_group2
+    python sample_status_file_creator.py csv_input_file, sample_group1, sample_group2
 </ul>
 
 
