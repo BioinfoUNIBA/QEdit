@@ -81,7 +81,7 @@ in accordance with Benjamini Hochberg correction.</p>
     <li> Samples group2 (e.g BrainCerebellum) </li>
   </ul>
   <br>
-  <b>Usage</b>:
+  Usage:
   <br>
   <pre>python sample_status_file_creator.py csv_input_file, sample_group1, sample_group2</pre>
 </ul>
@@ -93,11 +93,13 @@ in accordance with Benjamini Hochberg correction.</p>
   <ul>
     <li> A sample status file (.sif) like <a href="https://raw.githubusercontent.com/BioinfoUNIBA/QEdit/master/Example_files/csv_input_file"> this </a> that can be generated with the previous script.</li>
   </ul>
-  
+</ul>
+  <br>
+  Usage:
   <br>
     python sample_path_folder_creator.py csv_sample_file.sif
 
-Note. The script assumes that REDItools outputs (e.g. SRR1071289, SRR1101591) are contained in a "tables" folder in your main working directory, otherwise modify the last line of the script accordingly.
+<u>Note</u>. The script assumes that REDItools outputs (e.g. SRR1071289, SRR1101591) are contained in a "tables" folder in your main working directory, otherwise modify the last line of the script accordingly.
 
 </body>
 </html> 
