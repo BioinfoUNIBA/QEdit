@@ -1,4 +1,4 @@
-volcano_plot_recoding_cerebVSarttib.txt (FILE DI PROVA)
+(volcano_plot_recoding_cerebVSarttib.txt)
 Site	Delta	log	color
 MIIP_S355G	0.018	1.759276071	UP
 GSTM5_K53R	-0.047	0.327344386	NS.
