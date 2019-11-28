@@ -1,6 +1,6 @@
 <h1 text-align="center">R code for Volcano plot representation of differentially edited sites</h1>
 
-Data table should be formatted as <a href="https://raw.githubusercontent.com/BioinfoUNIBA/QEdit/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib.txt"> "volcano_plot_recoding_cerebVSarttib.txt"</a>
+Data table should be formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib.txt"> "volcano_plot_recoding_cerebVSarttib.txt"</a>
 
 In particular, the "Delta" value is the difference between the average level of editing between the two compared groups and the "log" value is the -log(10) of Benjamini Hochberg corrected pvalue calculated by Mann-Whitney two tailed test.
 
