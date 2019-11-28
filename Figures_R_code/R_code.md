@@ -17,7 +17,7 @@ dev.off()
 
 <h1 text-align="center">R code for heatmap showing editing levels at recoding sites</h1>
 
-Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib.txt"> volcano_plot_recoding_cerebVSarttib.txt</a>
+Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib.txt"> filtered_full_recoding_table.txt</a>
 
 <pre>library(ComplexHeatmap)
 library(circlize)
