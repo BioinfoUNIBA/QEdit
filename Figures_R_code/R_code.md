@@ -1,6 +1,6 @@
 <h1 text-align="center">R code for Volcano plot representation of differentially edited sites</h1>
 
-Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib.txt"> volcano_plot_recoding_cerebVSarttib.txt</a>
+Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib2.txt"> volcano_plot_recoding_cerebVSarttib.txt</a>
 
 In particular, the "Delta" value is the difference between the average level of editing between the two compared groups and the "log" value is the -log(10) of Benjamini Hochberg corrected pvalue calculated by Mann-Whitney two tailed test.
 
@@ -17,7 +17,7 @@ dev.off()
 
 <h1 text-align="center">R code for heatmap showing editing levels at recoding sites</h1>
 
-Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/filtered_full_recoding_table.txt"> filtered_full_recoding_table.txt</a>
+Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/filtered_full_recoding_table2.txt"> filtered_full_recoding_table.txt</a>
 
 <pre>library(ComplexHeatmap)
 library(circlize)
