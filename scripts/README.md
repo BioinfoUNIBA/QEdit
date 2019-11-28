@@ -80,8 +80,9 @@ in accordance with Benjamini Hochberg correction.</p>
     <li> Samples group1 (e.g. ArteryTibial) </li>
     <li> Samples group2 (e.g BrainCerebellum) </li>
   </ul>
+  <b>Usage</b>:
   <br>
-    python sample_status_file_creator.py csv_input_file, sample_group1, sample_group2
+    >python sample_status_file_creator.py csv_input_file, sample_group1, sample_group2
 </ul>
 <br>
 <ul>
