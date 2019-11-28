@@ -1,4 +1,4 @@
-R code for Volcano plot representation of differentially edited sites
+<h1>R code for Volcano plot representation of differentially edited sites</h1>
 
 data table should be formatted as <a href="https://raw.githubusercontent.com/BioinfoUNIBA/QEdit/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib.txt"> "volcano_plot_recoding_cerebVSarttib.txt"</a>
 
