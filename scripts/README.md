@@ -80,9 +80,10 @@ in accordance with Benjamini Hochberg correction.</p>
     <li> Samples group1 (e.g. ArteryTibial) </li>
     <li> Samples group2 (e.g BrainCerebellum) </li>
   </ul>
+  <br>
   <b>Usage</b>:
   <br>
-    >python sample_status_file_creator.py csv_input_file, sample_group1, sample_group2
+  <pre>python sample_status_file_creator.py csv_input_file, sample_group1, sample_group2</pre>
 </ul>
 <br>
 <ul>
@@ -92,6 +93,7 @@ in accordance with Benjamini Hochberg correction.</p>
   <ul>
     <li> A sample status file (.sif) like <a href="https://raw.githubusercontent.com/BioinfoUNIBA/QEdit/master/Example_files/csv_input_file"> this </a> that can be generated with the previous script.</li>
   </ul>
+  
   <br>
     python sample_path_folder_creator.py csv_sample_file.sif
 
