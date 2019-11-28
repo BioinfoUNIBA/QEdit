@@ -14,3 +14,8 @@ png("volcano_plot.png", w=24, h=20, res = 300, units = 'in', pointsize=25)
 ggplot(data, aes(x=Delta, y=log, color=color)) + geom_point(size = 5,alpha = 1) + geom_hline(yintercept = 1.3, colour="#990000", linetype="dashed") + geom_vline(xintercept = 0.1, colour="#990000", linetype="dashed") + geom_vline(xintercept = -0.1, colour="#990000", linetype="dashed") + ggtitle(label =title, subtitle = "n. sites = 85") + scale_colour_manual(values = cols)+ ylab(expression(paste("",-log[10],"(", italic("p"),"adj" ,")",sep="")))+ xlab(expression(Delta~editing)) + scale_x_continuous(limits=c(-0.8,0.8))+ theme(axis.title=element_text(size="30"), axis.text.x=element_text(size="20"), axis.text.y=element_text(size="20"), legend.text=element_text(size="20"), legend.title=element_blank(),plot.subtitle = element_text(size="30"),plot.title = element_text(size="35")) + geom_text_repel(data=names ,aes(label=names$Site),size=8,show.legend=F)
 dev.off()
 </pre>
+
+<h1 text-align="center">R code for heatmap showing editing levels at recoding sites</h1>
+
+
+
