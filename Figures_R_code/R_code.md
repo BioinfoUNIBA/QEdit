@@ -17,7 +17,7 @@ dev.off()
 
 <h1 text-align="center">R code for heatmap showing editing levels at recoding sites</h1>
 
-Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/filtered_full_recoding_table2.txt"> filtered_full_recoding_table.txt</a>
+Data table, containing editing levels (%) at recoding poisitions covered by at least 10 reads, should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/filtered_full_recoding_table2.txt"> filtered_full_recoding_table.txt</a>
 
 <pre>library(ComplexHeatmap)
 library(circlize)
