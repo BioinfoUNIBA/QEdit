@@ -17,5 +17,21 @@ dev.off()
 
 <h1 text-align="center">R code for heatmap showing editing levels at recoding sites</h1>
 
+Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib.txt"> volcano_plot_recoding_cerebVSarttib.txt</a>
+
+<pre>library(ComplexHeatmap)
+library(circlize)
+library('RColorBrewer')
+data <- read.table("filtered_full_recoding_table.txt", header=TRUE, row.names=1,check.names = FALSE, sep = "\t")
+mat <- as.matrix(data)
+cols <- colorRampPalette(brewer.pal(9, 'Blues'))(100)
+ha_column = HeatmapAnnotation(df = data.frame(tissue = c(rep("Artery - Aorta", 14), rep("Artery - Tibial", 14), rep("Brain - Amygdala",14), rep("Brain - Cerebellum", 14), rep("Brain - Frontal Cortex (BA9)", 14), rep("Brain - Hippocampus", 14), rep("Brain - Hypothalamus", 14), rep("Brain - Spinal cord (cervical c-1)", 14), rep("Lung", 14), rep("Muscle - Skeletal", 14))), col = list(tissue = c("Brain - Frontal Cortex (BA9)" = "royalblue2", "Brain - Hippocampus" = "steelblue3", "Brain - Cerebellum" = "deepskyblue4", "Brain - Spinal cord (cervical c-1)" = "steelblue1", "Muscle - Skeletal" = "lightsalmon3", "Brain - Hypothalamus" = "slateblue1", "Lung" = "darkslategray2", "Artery - Tibial" = "lightcoral", "Artery - Aorta" = "indianred2", "Brain - Amygdala" = "lightblue3")), annotation_legend_param = list(labels_gp = gpar(fontsize = 20), title_gp = gpar(fontsize = 15) , title = " ", grid_height = unit(2, "cm"), grid_width = unit(1.5, "cm"), title_position = "leftcenter-rot"))
+png("recoding_editing_heatmap.png", w=28, h=22, res = 300, units = 'in', pointsize=25)
+Heatmap(mat, cluster_rows = TRUE, top_annotation =ha_column, show_row_dend = FALSE, cluster_columns = FALSE, col = cols, na_col = "gray95", show_column_names = FALSE, row_names_side = "left", row_names_gp = gpar(fontsize = 10), heatmap_legend_param = list(labels_gp = gpar(fontsize = 20), title_gp = gpar(fontsize = 20) ,col_fun = cols, title = "editing level (%)", at = c(0, 50, 100), legend_height = unit(10, "cm"), grid_width = unit(1.5, "cm"), title_position = "leftcenter-rot"))
+dev.off()
+</pre>
+
+
+
 
 
