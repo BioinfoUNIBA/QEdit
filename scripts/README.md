@@ -99,7 +99,7 @@ in accordance with Benjamini Hochberg correction.</p>
   <pre> python sample_path_folder_creator.py csv_sample_file.sif</pre>
 </ul>
 
-<u>Note</u>. The script assumes that REDItools outputs (e.g. SRR1071289, SRR1101591) are contained in a "tables" folder in your main working directory, otherwise modify the last line of the script accordingly.
+<b>Note</b>. The script assumes that REDItools outputs (e.g. SRR1071289, SRR1101591) are contained in a "tables" folder in your main working directory, otherwise modify the last line of the script accordingly.
 
 </body>
 </html> 
