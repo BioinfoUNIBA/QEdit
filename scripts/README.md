@@ -36,6 +36,7 @@ optional arguments:
   
   <b>-input_file</b> SAMPLES_INFORMATIONS_FILE (.sif) Comma separated file e.g: Sample,Group,Type 
   (e.g SRR1093527,GROUPA,BrainCerebellum..., SRR1088437,GROUPB,ArteryTibial... etc)
+  An example file is provided<a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Example_files/csv_input_file"> here</a>
   
   <b>-gene_pos_file</b> GENE_POS_FILE nonsynonymous_table_NONREP derived from Rediportal 
   NOTE: A gene_pos file is required by -graph or -rsite.
