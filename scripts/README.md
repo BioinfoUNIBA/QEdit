@@ -83,7 +83,18 @@ in accordance with Benjamini Hochberg correction.</p>
 
     python sample_status_file_creator.py csv_input_file, sample_group1, sample_group2
 </ul>
+<br>
+<ul>
+  <li>sample_path_folder_creator.py</li> 
+  This script will copy the Reditools tables in different directories following the sample/Group subdivisions reported in
+  the sample informations file (.sif). It requires:
+  <ul>
+    <li> A sample status file (.sif) like <a href="https://raw.githubusercontent.com/BioinfoUNIBA/QEdit/master/Example_files/csv_input_file"> this </a> that can be generated with the previous script.</li>
+  </ul>
 
+    python sample_path_folder_creator.py csv_sample_file.sif
+
+Note. The script assumes that REDItools outputs (e.g. SRR1071289, SRR1101591) are contained in a "tables" folder in your main working directory, otherwise modify the last line of the script accordingly.
 
 </body>
 </html> 
