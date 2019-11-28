@@ -16,5 +16,5 @@ with open(sample_status_file, 'r') as e:
                 dna_rna_folder = srr_dir + '/editing/DnaRna_' + randomStringDigits()
                 if not os.path.exists(dna_rna_folder):
                          os.makedirs(dna_rna_folder)
-                os.system('cp ../tables/%s %s' %(srr_dir, dna_rna_folder))  
+                os.system('cp ../tables/%s %s' %(srr_dir, dna_rna_folder))  #<------- LINE TO MODIFY
 #If REDItools output tables (e.g SRR...) are stored in a different folder, please modify the previous line accordingly.
