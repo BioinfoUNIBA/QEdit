@@ -7,7 +7,7 @@ In particular, the "Delta" value is the difference between the average level of 
 <pre>library(ggplot2)
 library(ggrepel)
 data <- read.table("volcano_plot_recoding_cerebVSarttib.txt", header=TRUE, check.names = FALSE)
-names <- subset(countdata, log > 1.3 & Delta > 0.05 | log > 1.3 & Delta < -0.05)
+names <- subset(data, log > 1.3 & Delta > 0.05 | log > 1.3 & Delta < -0.05)
 cols <- c("UP" = "salmon", "DOWN" = "dodgerblue", "NS." = "darkgrey")
 title <- expression("Cerebellum"~italic("vs.")~"Artery Tibial")
 png("volcano_plot.png", w=24, h=20, res = 300, units = 'in', pointsize=25)
