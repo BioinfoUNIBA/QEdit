@@ -4,6 +4,6 @@ The output format is .png, to change it we suggest to use open tools like <a hre
 <img src="./hg38 bwa trimmedVShg38 star trimmed.png" alt="Venn_Diagram">
 <p><b>Usage:</b></p>
 
-<python Venn_diagram.py groupA groupB
+> python Venn_diagram.py groupA groupB
 
 <p align-text="justify">GroupA/GroupB files must be formatted according to <a href="https://raw.githubusercontent.com/BioinfoUNIBA/QEdit/master/Figures_Python_code/SRR607967_hg38_bwa_trimmed.edi.fltrd_wgs_AGTC">this</a> example file.</p>
