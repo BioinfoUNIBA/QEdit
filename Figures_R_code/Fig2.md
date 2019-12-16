@@ -20,4 +20,4 @@
 
 Input file is provided <a href="./STAR_hg19_trimmed_redi2_jacusa_filtered_wgs">here</a>.
 <p>Output</p>
-<img src="./Fig2_300dpi.tiff" alt="Fig2_300dpi">
+<img src="./Fig2_300dpi.png" alt="Fig2_300dpi">
