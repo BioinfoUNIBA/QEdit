@@ -1,7 +1,7 @@
 <h1>Fig2.tiff R code.</h1>
-<p align-text="justify"> Open bash terminal and digit: <p>
+<p align-text="justify"> Open bash terminal and insert: <p>
 
-> R
+> R <br>
 > jpeg("Fig2.jpg",width=1280,height=1024) #png("test.png",width=1280,height=1024)
 > par(mar = c(5, 5, 1, 3)) # bottom, left, top, right
 > a = read.table("STAR_hg19_trimmed_redi2_jacusa_filtered_wgs", header=TRUE)
