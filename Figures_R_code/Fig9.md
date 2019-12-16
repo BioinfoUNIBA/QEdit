@@ -20,4 +20,4 @@
 
 Input file is provided <a href="./REDI2_hg19_hg38_bwa_star_trimmed_untrimmed">here</a>.
 <p>Output</p>
-<img src="./Fig2_300dpi.png" alt="Fig2_300dpi">
+<img src="./Fig9_300dpi.png" alt="Fig2_300dpi">
