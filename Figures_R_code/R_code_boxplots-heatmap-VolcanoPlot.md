@@ -1,6 +1,6 @@
 <h1 text-align="center">R code for box plot representation of Editing Index distributions</h1>
 
-Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/AEI_GTEx_selected.txt"> AEI_GTEx_selected.txt</a>
+Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/AEI_GTEx_selected.txt"> AEI_GTEx_selected.txt.</a>
 
 <pre>library (ggplot2)
 data <- read.table("AEI_GTEx_selected.txt", header=TRUE, check.names = FALSE, sep = "\t")
@@ -22,7 +22,7 @@ dev.off()
 <img src="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/PositionEffect2.png">
 <h1 text-align="center">R code for heatmap showing editing levels at recoding sites</h1>
 
-Data table, containing editing levels (%) at recoding poisitions covered by at least 10 reads, should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/filtered_full_recoding_table2.txt"> filtered_full_recoding_table.txt</a>
+Data table, containing editing levels (%) at recoding poisitions covered by at least 10 reads, should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/filtered_full_recoding_table2.txt"> filtered_full_recoding_table.txt.</a>
 
 <pre>library(ComplexHeatmap)
 library(circlize)
