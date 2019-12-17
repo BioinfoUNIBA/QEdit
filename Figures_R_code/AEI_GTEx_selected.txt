@@ -1,0 +1,124 @@
+Value	Condition
+1.594203	Brain - Frontal Cortex (BA9)
+2.100743	Brain - Frontal Cortex (BA9)
+2.338772	Brain - Frontal Cortex (BA9)
+2.043409736	Brain - Frontal Cortex (BA9)
+2.010901	Brain - Frontal Cortex (BA9)
+1.97139	Brain - Frontal Cortex (BA9)
+2.285958547	Brain - Frontal Cortex (BA9)
+2.603362703	Brain - Frontal Cortex (BA9)
+2.01646	Brain - Frontal Cortex (BA9)
+2.1427	Brain - Frontal Cortex (BA9)
+2.073852	Brain - Frontal Cortex (BA9)
+2.354033803	Brain - Frontal Cortex (BA9)
+2.892729	Brain - Frontal Cortex (BA9)
+1.855949	Brain - Hippocampus
+1.973274	Brain - Hippocampus
+2.501622	Brain - Hippocampus
+1.951542	Brain - Hippocampus
+1.844146106	Brain - Hippocampus
+2.091472	Brain - Hippocampus
+2.030203994	Brain - Hippocampus
+1.801717	Brain - Hippocampus
+1.950454	Brain - Hippocampus
+2.129344973	Brain - Hippocampus
+2.227335	Brain - Hippocampus
+2.986049	Brain - Cerebellum
+2.676643	Brain - Cerebellum
+2.923263	Brain - Cerebellum
+3.191349	Brain - Cerebellum
+2.638121	Brain - Cerebellum
+3.004627	Brain - Cerebellum
+2.489002	Brain - Cerebellum
+2.771848	Brain - Cerebellum
+2.919419	Brain - Cerebellum
+2.727012	Brain - Cerebellum
+2.796188	Brain - Cerebellum
+3.106337348	Brain - Cerebellum
+1.728159	Brain - Spinal cord (cervical c-1)
+2.195495	Brain - Spinal cord (cervical c-1)
+1.58199	Brain - Spinal cord (cervical c-1)
+2.48656	Brain - Spinal cord (cervical c-1)
+2.183777	Brain - Spinal cord (cervical c-1)
+1.758545	Brain - Spinal cord (cervical c-1)
+1.763525979	Brain - Spinal cord (cervical c-1)
+2.100367604	Brain - Spinal cord (cervical c-1)
+1.81554	Brain - Spinal cord (cervical c-1)
+2.175151	Brain - Spinal cord (cervical c-1)
+0.7356995	Muscle - Skeletal
+0.656114707	Muscle - Skeletal
+0.7957386	Muscle - Skeletal
+0.662775647	Muscle - Skeletal
+0.517559881	Muscle - Skeletal
+0.5857557	Muscle - Skeletal
+0.5768876	Muscle - Skeletal
+0.5329779	Muscle - Skeletal
+0.7504821	Muscle - Skeletal
+0.771033	Muscle - Skeletal
+0.8028432	Muscle - Skeletal
+0.8220767	Muscle - Skeletal
+0.7149877	Muscle - Skeletal
+2.093008192	Brain - Hypothalamus
+2.184049	Brain - Hypothalamus
+1.900406	Brain - Hypothalamus
+2.121576	Brain - Hypothalamus
+1.974483	Brain - Hypothalamus
+2.188111251	Brain - Hypothalamus
+2.472523	Brain - Hypothalamus
+2.657064	Brain - Hypothalamus
+2.415580177	Brain - Hypothalamus
+2.116072	Brain - Hypothalamus
+1.923887	Brain - Hypothalamus
+2.108526	Brain - Hypothalamus
+2.187617	Brain - Hypothalamus
+2.184057302	Brain - Hypothalamus
+3.002164178	Lung
+1.357915	Lung
+1.655895	Lung
+1.684262	Lung
+2.670661	Lung
+1.214931	Lung
+2.668388	Lung
+1.72467	Lung
+1.09364	Lung
+2.629246	Artery - Tibial
+2.714391308	Artery - Tibial
+3.381555	Artery - Tibial
+2.220824	Artery - Tibial
+2.533155	Artery - Tibial
+2.608974	Artery - Tibial
+2.379826	Artery - Tibial
+2.684926	Artery - Tibial
+2.023389	Artery - Tibial
+2.557156	Artery - Tibial
+2.228666	Artery - Tibial
+1.681064	Artery - Tibial
+3.060169	Artery - Tibial
+3.354026	Artery - Tibial
+2.050766	Artery - Aorta
+1.387997	Artery - Aorta
+1.828263	Artery - Aorta
+1.691867	Artery - Aorta
+2.670689	Artery - Aorta
+2.080862	Artery - Aorta
+2.266206	Artery - Aorta
+4.009467	Artery - Aorta
+2.113196	Artery - Aorta
+1.65122	Artery - Aorta
+1.91872221	Artery - Aorta
+4.263231	Artery - Aorta
+2.988754	Artery - Aorta
+1.602747	Artery - Aorta
+1.997465	Brain - Amygdala
+2.231428	Brain - Amygdala
+2.053549684	Brain - Amygdala
+2.206877	Brain - Amygdala
+2.02013	Brain - Amygdala
+1.918569	Brain - Amygdala
+2.079117531	Brain - Amygdala
+2.261329	Brain - Amygdala
+1.915444	Brain - Amygdala
+1.898804232	Brain - Amygdala
+2.155254689	Brain - Amygdala
+1.813901	Brain - Amygdala
+1.815075	Brain - Amygdala
