@@ -38,9 +38,9 @@ dev.off()
 <img src="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/recoding_editing_heatmap2.png">
 <h1 text-align="center">R code for Volcano plot representation of differentially edited sites</h1>
 
-Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib2.txt"> volcano_plot_recoding_cerebVSarttib.txt</a>
+Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib2.txt"> volcano_plot_recoding_cerebVSarttib.txt</a>.
 
-In particular, the "Delta" value is the difference between the average level of editing between the two compared groups and the "log" value is the -log(10) of Benjamini Hochberg corrected pvalue calculated by Mann-Whitney two tailed test.
+In particular, the "Delta" value is the difference between the average level of editing between the two compared groups and the "log" value is the -log(10) of Benjamini Hochberg corrected p-value calculated by Mann-Whitney two-tailed test.
 
 <pre>library(ggplot2)
 library(ggrepel)
