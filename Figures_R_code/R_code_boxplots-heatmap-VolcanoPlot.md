@@ -42,6 +42,8 @@ Data table should be tab delimited and formatted as <a href="https://github.com/
 
 In particular, the "Delta" value is the difference between the average level of editing between the two compared groups and the "log" value is the -log(10) of Benjamini Hochberg corrected p-value calculated by Mann-Whitney two-tailed test.
 
+Since the reported comparison is cerebellum versus tibial artery, all recoding sites in the left quadrant (Delta editing < 0) are up-regulated in the tibial artery; on the contrary all the sites in the right quadrant are specifically over-edited in the cerebellum.
+
 <pre>library(ggplot2)
 library(ggrepel)
 data <- read.table("volcano_plot_recoding_cerebVSarttib.txt", header=TRUE, check.names = FALSE)
