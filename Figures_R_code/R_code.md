@@ -1,3 +1,14 @@
+<h1 text-align="center">R code for box plot representation of Editing Index distributions</h1>
+
+Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib2.txt"> volcano_plot_recoding_cerebVSarttib.txt</a>
+
+<pre>library ggplot2
+data <- read.table("AEI_GTEx_selected.txt", header=TRUE, check.names = FALSE, sep = "\t")
+cols <- c("Brain - Frontal Cortex (BA9)" = "royalblue2", "Brain - Hippocampus" = "steelblue3", "Brain - Cerebellum" = "deepskyblue4", "Brain - Spinal cord (cervical c-1)" = "steelblue1", "Muscle - Skeletal" = "lightsalmon3", "Brain - Hypothalamus" = "slateblue1", "Lung" = "darkslategray2", "Artery - Tibial" = "lightcoral", "Artery - Aorta" = "indianred2", "Brain - Amygdala" = "lightblue3")
+png("AEI_GTEx_selected.png", w=25, h=16, res = 300, units = 'in', pointsize=25)
+ggplot(data, aes(x=Condition, y=Value, fill=Condition)) + geom_boxplot(alpha=0.7) + xlab(" ") + theme(axis.title=element_text(size="30"), axis.text.y=element_text(size="20"), legend.text=element_text(size="25"), legend.title=element_blank(), strip.text.x=element_text(size="25"), axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank(),legend.position = "none", plot.title=element_text(size="30", hjust = 0.5)) + scale_fill_manual(values=cols)+ ylab("AEI (%)") + ggtitle("Alu Editing Index")
+dev.off()
+
 <h1 text-align="center">R code for Volcano plot representation of differentially edited sites</h1>
 
 Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib2.txt"> volcano_plot_recoding_cerebVSarttib.txt</a>
