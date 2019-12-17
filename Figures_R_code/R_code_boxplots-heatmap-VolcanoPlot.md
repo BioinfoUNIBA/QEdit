@@ -11,7 +11,7 @@ dev.off()
 </pre>
 <img src="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/hillel_AEI_GTEx_selected.png">
 <h1 text-align="center">R code for "position effect" plot</h1>
-Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/AEI_GTEx_selected.txt"> AEI_GTEx_selected.txt</a>. To make the trend clearer, the values in the x axis have been converted to a logarithmic scale.
+Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/PositionEffect2.txt"> PositionEffect.txt</a>. To make the trend clearer, the values in the x axis have been converted to a logarithmic scale.
 <pre>library(ggplot2)
 library(scales)
 data <- read.table("PositionEffect.txt", header=TRUE, check.names = FALSE, sep = "\t")
@@ -19,6 +19,7 @@ png("PositionEffect.png", w=12, h=8, res = 300, units = 'in', pointsize=25)
 ggplot(data, aes(x=xval, y=yval)) + geom_point(size=2) + geom_line(color="blue", linetype = "dotted") + ylab("Correlation") + xlab(expression(log[10]("N. Edited Sites"))) + theme(axis.title=element_text(size="20"), axis.text.y=element_text(size="16"), axis.text.x=element_text(size="16"), plot.title=element_text(size="25", hjust = 0.5)) + ggtitle("Overall Editing") + scale_y_continuous(breaks=c(0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1), limits=c(0.6,1)) + scale_x_log10(limits=c(1000, 10000000), breaks = trans_breaks("log10", function(x) 10^x), labels = trans_format("log10", math_format(10^.x)))
 dev.off()
 </pre>
+<img src="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/PositionEffect2.png">
 <h1 text-align="center">R code for heatmap showing editing levels at recoding sites</h1>
 
 Data table, containing editing levels (%) at recoding poisitions covered by at least 10 reads, should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/filtered_full_recoding_table2.txt"> filtered_full_recoding_table.txt</a>
