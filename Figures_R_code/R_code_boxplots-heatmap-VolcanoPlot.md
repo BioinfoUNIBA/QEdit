@@ -22,7 +22,7 @@ dev.off()
 <img src="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/PositionEffect2.png">
 <h1 text-align="center">R code for heatmap showing editing levels at recoding sites</h1>
 
-Data table, containing editing levels (%) at recoding poisitions covered by at least 10 reads, should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/filtered_full_recoding_table2.txt"> filtered_full_recoding_table.txt</a>. The order of the rows is determined by performing hierarchical cluster analyses of the rows.
+Data table, containing editing levels (%) at recoding poisitions covered by at least 10 reads, should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/filtered_full_recoding_table2.txt"> filtered_full_recoding_table.txt</a>. The order of the rows is determined by performing hierarchical cluster analyses of the rows. Missing values are shown in light gray.
 
 <pre>library(ComplexHeatmap)
 library(circlize)
