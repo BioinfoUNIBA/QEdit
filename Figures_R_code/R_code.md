@@ -1,8 +1,8 @@
 <h1 text-align="center">R code for box plot representation of Editing Index distributions</h1>
 
-Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib2.txt"> volcano_plot_recoding_cerebVSarttib.txt</a>
+Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib2.txt"> AEI_GTEx_selected.txt</a>
 
-<pre>library ggplot2
+<pre>library (ggplot2)
 data <- read.table("AEI_GTEx_selected.txt", header=TRUE, check.names = FALSE, sep = "\t")
 cols <- c("Brain - Frontal Cortex (BA9)" = "royalblue2", "Brain - Hippocampus" = "steelblue3", "Brain - Cerebellum" = "deepskyblue4", "Brain - Spinal cord (cervical c-1)" = "steelblue1", "Muscle - Skeletal" = "lightsalmon3", "Brain - Hypothalamus" = "slateblue1", "Lung" = "darkslategray2", "Artery - Tibial" = "lightcoral", "Artery - Aorta" = "indianred2", "Brain - Amygdala" = "lightblue3")
 png("AEI_GTEx_selected.png", w=25, h=16, res = 300, units = 'in', pointsize=25)
