@@ -1,6 +1,6 @@
 <h1 text-align="center">R code for box plot representation of Editing Index distributions</h1>
 
-Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/volcano_plot_recoding_cerebVSarttib2.txt"> AEI_GTEx_selected.txt</a>
+Data table should be tab delimited and formatted as <a href="https://github.com/BioinfoUNIBA/QEdit/blob/master/Figures_R_code/AEI_GTEx_selected.txt"> AEI_GTEx_selected.txt</a>
 
 <pre>library (ggplot2)
 data <- read.table("AEI_GTEx_selected.txt", header=TRUE, check.names = FALSE, sep = "\t")
