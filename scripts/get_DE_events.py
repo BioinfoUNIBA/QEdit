@@ -393,7 +393,8 @@ for directory in cwd:
 		table = path[1][0] + '/' + path[1][-1][-1] 
 		with open(table,'r') as a:
 			for line in a:
-				if line.startswith('chr'):
+				#if line.startswith('chr'):
+				if not line.startswith('Region'):
 					s = map(str.strip, line.split("\t"))
 					if s[7].split(' ')[0] in ['AG','TC']:
 						site, freq, coverage, ed_type = s[0] + "_" + s[1], s[8], s[4], s[7]
