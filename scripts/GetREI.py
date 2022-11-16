@@ -79,7 +79,7 @@ for i in f:
 	chr=l[0]
 	cc=(int(l[1])-1,int(l[1]))
 	gene=l[10]
-	la=((l[12].split(',')[0]).split(':')[-1]).split('.')[1]
+	la=((l[12].split(',')[0]).split(':')[-1]).split('.')[-1]
 	aa=la[0]+la[-1]
 	if chr not in allchrs: continue
 	pos=[row.split('\t') for row in table.fetch(chr, cc[0], cc[1])]
